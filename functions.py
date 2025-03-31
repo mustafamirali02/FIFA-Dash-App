@@ -31,7 +31,7 @@ def fifa_data():
 
 
 app = Dash()
-
+server = app.server
 
 app.layout = [
     html.H1("FIFA World Cup Data", style={"color":"black", "font-family":"Verdana", "textAlign":"center", "padding":"auto"}),
