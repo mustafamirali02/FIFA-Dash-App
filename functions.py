@@ -12,8 +12,6 @@ from dash import Dash, html, dcc, callback, Output, Input
 import plotly.express as px
 import plotly.graph_objects as go
 
-from datetime import datetime
-import yfinance as yf
 
 
 def fifa_data():
@@ -31,7 +29,7 @@ def fifa_data():
 
 
 app = Dash()
-server = app.server
+
 
 app.layout = [
     html.H1("FIFA World Cup Data", style={"color":"black", "font-family":"Verdana", "textAlign":"center", "padding":"auto"}),
