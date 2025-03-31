@@ -29,6 +29,7 @@ def fifa_data():
 
 
 app = Dash()
+server = app.server
 
 
 app.layout = [
