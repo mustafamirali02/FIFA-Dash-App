@@ -1,4 +1,6 @@
 '''
+https://fifa-dash-app.onrender.com
+
 Assignment 7
 CP321
 
@@ -11,7 +13,6 @@ import pandas as pd
 from dash import Dash, html, dcc, callback, Output, Input
 import plotly.express as px
 import plotly.graph_objects as go
-
 
 
 def fifa_data():
@@ -88,7 +89,8 @@ def update_graph(country, year):
 
     if year:
         year_winner = df1[df1["Year"] == year].iloc[0,1]
-        year_winner_str = f"{year_winner}won the FIFA World cup in {year}"
+        year_runnerup = df1[df1["Year"] == year].iloc[0,2]
+        year_winner_str = f"{year_winner}won the FIFA World cup in {year}, with the runner-up being {year_runnerup}"
     else:
         country_win_str = "Select a year"
     
